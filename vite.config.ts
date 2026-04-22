@@ -8,6 +8,8 @@ export default defineConfig(({ mode }) => {
       server: {
         port: 5000,
         host: '0.0.0.0',
+        // This line fixes the Replit Blocked Request error instantly
+        allowedHosts: true,
       },
       plugins: [react()],
       define: {
