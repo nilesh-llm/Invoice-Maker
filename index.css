@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .print-area {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+  main {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .lg\:w-2\/3 {
+    width: 100% !important;
+  }
+}
