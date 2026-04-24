@@ -1,6 +1,7 @@
 
 export type DocumentType = 'QUOTATION' | 'INVOICE';
 export type CompanyId = 'morr' | 'tumeng-bi' | 'house-of-healing';
+export type InvoiceTemplateId = 'standard' | 'spreadsheet' | 'continental' | 'compact';
 
 export interface LineItem {
   description: string;
@@ -33,6 +34,7 @@ export interface BrandingTheme {
 }
 
 export interface DocumentData {
+  id?: string;
   type: DocumentType;
   docNumber: string;
   currencySymbol: string;
@@ -52,5 +54,12 @@ export interface DocumentData {
   total: number;
   currencyCode: string;
   notes: string;
+  templateId?: InvoiceTemplateId;
   theme: BrandingTheme;
+}
+
+export interface SavedInvoiceRecord {
+  id: string;
+  savedAt: string;
+  data: DocumentData;
 }

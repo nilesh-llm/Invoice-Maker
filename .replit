@@ -34,7 +34,6 @@ localPort = 5000
 externalPort = 80
 
 [deployment]
-run = ["sh", "-c", "https://e061400d-ac5e-4f95-8120-186b1fa8956a-00-3t5m7ga5hrquj.pike.replit.dev/"]
-deploymentTarget = "static"
+deploymentTarget = "autoscale"
 build = ["npm", "run", "build"]
-publicDir = "dist"
+run = ["npm", "run", "start"]
